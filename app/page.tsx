@@ -357,7 +357,7 @@ export default function WorkspaceDesigner() {
 
             {/* Accessories */}
             {activeTab === 'accessories' && (() => {
-              const categories = [...new Set(ACCESSORIES.map(a => a.category))]
+              const categories = Array.from(new Set(ACCESSORIES.map(a => a.category)))
               return categories.map(cat => (
                 <div key={cat}>
                   <h3 className="text-white/40 text-xs font-bold uppercase tracking-widest mb-2">{cat}</h3>
